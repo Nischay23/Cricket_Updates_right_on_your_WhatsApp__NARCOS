@@ -15,7 +15,7 @@ class ScoreGet:
         Declaring the endpoints, apikey
         """
         self.url_get_all_matches = "https://api.cricapi.com/v1/currentMatches"
-        self.api_key = "6a9d499a-dc31-4acd-b59f-a0b287092ef7"
+        self.api_key = "2ad6113b-c87e-4de4-9389-33fe9af62179"
         self.unique_id = ""  # unique to every match
 
     def get_unique_id(self):
@@ -55,15 +55,8 @@ if __name__=="__main__":
     from twilio.rest import Client
 
     account_sid = 'AC849f0585431f11041e285f8aef24bbae'
-    auth_token = 'a7f64907dd61688d62e9a4faa7fb35de'
+    auth_token = 'cc2f050ca074694f7e5dab29df360d88'
     client = Client(account_sid, auth_token)
-    
-    conversation = client.conversations \
-                     .v1 \
-                     .conversations \
-                     .create(friendly_name='how r u')
-
-    print(conversation.sid)
 
     message = client.messages.create(
       from_='whatsapp:+14155238886',
@@ -75,11 +68,6 @@ if __name__=="__main__":
 
 
    
-
-
-
-# Find your Account SID and Auth Token at twilio.com/console
-# and set the environment variables. See http://twil.io/secure
 
 
 
